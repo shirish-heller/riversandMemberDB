@@ -1,0 +1,7 @@
+{
+  "name": "polv1",
+  "short_name": "polv1",
+  "description": "just fiddling around",
+  "start_url": "/",
+  "display": "standalone"
+}

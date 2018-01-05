@@ -1,0 +1,37 @@
+{
+  "name": "polv1",
+  "description": "just fiddling around",
+  "main": "index.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "paper-button": "PolymerElements/paper-button#^2.0.0",
+    "iron-input-elements": "PolymerElements/iron-input-elements",
+    "iron-list": "PolymerElements/iron-list#^2.0.12",
+    "paper-toolbar": "PolymerElements/paper-toolbar#^2.0.0",
+    "paper-styles": "PolymerElements/paper-styles#^2.0.0",
+    "paper-spinner": "PolymerElements/paper-spinner#^2.0.0",
+    "iron-ajax": "PolymerElements/iron-ajax#^2.0.6",
+    "app-layout": "PolymerElements/app-layout#^2.0.4",
+    "paper-icon-button": "PolymerElements/paper-icon-button#^2.0.1",
+    "iron-image": "PolymerElements/iron-image#^2.1.2",
+    "jquery": "^3.2.1",
+    "paper-item": "PolymerElements/paper-item#^2.0.0",
+    "iron-icon": "PolymerElements/iron-icon#^2.0.1",
+    "iron-meta": "PolymerElements/iron-meta#^2.0.3",
+    "iron-icons": "PolymerElements/iron-icons#^2.0.1",
+    "css-ripple-effect": "^1.0.8",
+    "iron-form": "PolymerElements/iron-form#^2.0.1",
+    "iron-input": "PolymerElements/iron-input#^2.0.1",
+    "iron-dropdown": "PolymerElements/iron-dropdown#^2.1.0",
+    "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu#^2.0.1",
+    "paper-input": "PolymerElements/paper-input#^2.0.5",
+    "paper-listbox": "PolymerElements/paper-listbox#^2.0.0",
+    "paper-checkbox": "PolymerElements/paper-checkbox#^2.0.1",
+    "polymer-global-variables": "^1.1.0",
+    "iron-scroll-threshold": "PolymerElements/iron-scroll-threshold#^2.0.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  }
+}

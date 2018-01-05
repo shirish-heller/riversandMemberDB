@@ -1,0 +1,128 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/iron-input/iron-input.html">
+<link rel="import" href="../../bower_components/iron-list/iron-list.html">
+
+<dom-module id="my-polelm">
+  <template>
+    <style>
+      :host {
+        background-color: cornsilk;
+        border: 1pt solid goldenrod;
+        padding: 15px;
+        position: relative;
+        top: 0;
+        right:0;
+        display: none;
+        
+      }
+
+      :host([visible]) {
+        display: block;
+      }
+
+      :host #cross {
+        cursor: pointer;
+      }
+      :host([type="critical"]) {
+        background-color: red;
+        color: white;
+        border: 1pt solid maroon;
+      }
+      
+       iron-list {
+        flex: 1 1 auto;
+        height: 50vh;
+      }
+      .lst2 {
+        display: flex;
+      flex-direction: column;
+      }
+    </style>
+    <div id="id-msgBnr">
+      <span id="cross">[X]</span>
+      <slot>This is the Default Message</slot>
+      <span>[[temp]]</span>  
+      <paper-button raised style="background-color: grey; color: white;" type="button" id="btn11" onclick="setTemp2(33)"> Set Temp= 33 </paper-button>
+      <paper-button id="btn22" raised style="background-color: grey; color: white" onclick="setTemp2(68)"> Set Temp= 68 </paper-button>
+      <paper-button id="btn33" raised style="background-color: grey; color: white" onclick="setTemp2(120)"> Set Temp= 120 </paper-button>
+      <br/>
+      <iron-input auto-validate><input value="{{temp::input}}"></iron-input>
+    </div>
+
+    <!-- Iron List -->
+
+    <!-- 
+    <template is="dom-repeat" items="{{employees}}">
+      <div>First Name:-<span>{{item.first}}</span></div>
+      <div>Last First Name:-<span>{{item.last}}</span></div>
+    </template>
+  </template> -->
+
+<!-- <div class="lst2">
+    <iron-list items="[[employees]]">
+        <template>
+          <div>
+              <div> First Name:-<span>{{item.last}}</span></div> 
+              <div>Last Name:-<span>{{item.first}}</span></div> 
+          </div>
+        
+        </template>
+      </iron-list>
+</div>  -->
+
+    </template>
+
+  <script>
+    function setTemp2(newTemp) {
+          var elm = document.querySelector('#polelm');
+          elm.temp = newTemp;
+        }
+    </script>
+
+  <script>
+
+    class MyPolelm extends Polymer.Element {
+
+      constructor() {
+        super();
+      }
+      static get is() { return 'my-polelm'; }
+      static get properties() {
+        return {
+          visible: {
+            type: Boolean,
+            reflectToAttribute: true,
+            notify: true,
+            value: false
+          },
+          type: {
+            type: String,
+            notify: true,
+            reflectToAttribute: true
+          },
+          temp: {
+            type:Number,
+            notify: true,
+            reflectToAttribute: true,
+            value: 88
+          }
+
+        };
+      }
+
+      ready() {
+        super.ready();
+        var cross = this.$.cross;
+        cross.addEventListener('click', e => {
+          this.visible = false;
+        });
+      }
+
+    }
+
+    window.customElements.define(MyPolelm.is, MyPolelm);
+  </script>
+
+
+</dom-module>
